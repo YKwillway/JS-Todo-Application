@@ -54,3 +54,36 @@ const message1 = "私の名前は" + name + "です。年齢は" + age + "です
 // バッククォートのショートカット -> shift @
 const message2 = `私の名前は${name}です。年齢は${age}です。`
 console.log(message2);
+
+/**
+ * アロー関数
+ */
+// 従来の関数
+const func1 = function func1(str) {
+  return str;
+}
+console.log(func1("func1です"));
+
+const func2 = (str) => {
+  return str;
+}
+// 引数が1つの場合、最初の括弧は省略可
+// const func2 = str => {
+//   return str;
+// }
+
+// 引数が1つの場合、{}とreturn句を省略可
+// const func2 = str => str;
+console.log(func2("func2です"));
+
+// const func3 = (num1, num2) => {
+//   return num1 + num2;
+// }
+// const func3 = (num1, num2) => num1 + num2;
+
+// 1行で且つオブジェクトを返却値としたい場合、({})で囲う
+const func3 = (num1, num2) => ({
+  hoge: num1,
+  fuga: num2,
+});
+console.log(func3(10, 20));
