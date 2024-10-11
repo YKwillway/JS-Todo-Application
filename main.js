@@ -41,3 +41,16 @@ console.log(val5);
 
 val5[2] = 'geraff';
 console.log(val5);
+
+/**
+ * テンプレートの文字列
+ */
+const name = "川端雄介";
+const age = 29;
+
+const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
+// console.log(message1);
+
+// バッククォートのショートカット -> shift @
+const message2 = `私の名前は${name}です。年齢は${age}です。`
+console.log(message2);
