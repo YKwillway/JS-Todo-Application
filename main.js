@@ -120,3 +120,14 @@ const myProfile2 = {
 const { age2, name2 } = myProfile2;
 console.log(age2);
 console.log(name2);
+
+/**
+ * オブジェクトの省略記法
+ */
+const name3 = "川端雄介";
+const age3 = 29;
+// 設定するプロパティと割り当てる変数名が同一の時は「: 変数名」を省略可
+const myProfile3 = {
+  name3,
+  age3
+};
