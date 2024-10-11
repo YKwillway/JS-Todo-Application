@@ -107,3 +107,16 @@ const myProfile = ["川端雄介", 29];
 const [name, age] = myProfile;
 const message3 = `名前は${name}です。年齢は${age}歳です。`;
 console.log(message3);
+
+/**
+ * デフォルト値(引数, 分割代入)
+ */
+const sayHello = (name = "ゲスト") => console.log(`こんにちは!${name}さん!`);
+sayHello("川端雄介");
+
+const myProfile2 = {
+  age2: 29
+};
+const { age2, name2 } = myProfile2;
+console.log(age2);
+console.log(name2);
