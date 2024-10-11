@@ -131,3 +131,41 @@ const myProfile3 = {
   name3,
   age3
 };
+
+/**
+ * スプレッド構文
+ * 先頭に「...」を付けると配列の中身を展開してくれる
+ */
+// const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+
+const arr1 = [1, 2];
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+sumFunc(arr1[0], arr1[1]);
+sumFunc(...arr1)
+
+// 分割代入の際に残りをまとめる
+const arr2 = [1, 2, 3, 4, 5];
+const [num1, num2, ...arr3] = arr2;
+console.log(num1)
+console.log(num2)
+console.log(arr3)
+
+// 配列のコピー
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+const arr6 = [...arr4];
+arr6[0] = 100;
+console.log(arr6);
+console.log(arr4);
+
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
+
+// 以下の参照を代入する形のコピーはコピー元とコピー先の変数が相互に影響しあうため、
+// 値の書き換えが発生した際に思わぬ不具合を発生する場合が出てくる
+// const arr8 = arr4;
+// console.log(arr8);
+// arr4[0] = 100;
+// console.log(arr8);
