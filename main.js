@@ -45,14 +45,14 @@ console.log(val5);
 /**
  * テンプレートの文字列
  */
-const name = "川端雄介";
-const age = 29;
+const name1 = "川端雄介";
+const age1 = 29;
 
-const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
+const message1 = "私の名前は" + name1+ "です。年齢は" + age1 + "です。";
 // console.log(message1);
 
 // バッククォートのショートカット -> shift @
-const message2 = `私の名前は${name}です。年齢は${age}です。`
+const message2 = `私の名前は${name1}です。年齢は${age1}です。`
 console.log(message2);
 
 /**
@@ -87,3 +87,23 @@ const func3 = (num1, num2) => ({
   fuga: num2,
 });
 console.log(func3(10, 20));
+
+/**
+ * 分割代入
+ */
+// const myProfile = {
+//   name: "川端雄介",
+//   age: 29
+// };
+// const { name, age } = myProfile;
+// const message3 = `名前は${name}です。年齢は${age}歳です。`;
+// console.log(message3);
+
+const myProfile = ["川端雄介", 29];
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// console.log(message3);
+
+// 参照する時の変数名を自由に決めることができる
+const [name, age] = myProfile;
+const message3 = `名前は${name}です。年齢は${age}歳です。`;
+console.log(message3);
