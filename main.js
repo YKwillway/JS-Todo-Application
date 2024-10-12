@@ -169,3 +169,34 @@ console.log(arr7);
 // console.log(arr8);
 // arr4[0] = 100;
 // console.log(arr8);
+
+/**
+ * 論理演算子の本当の意味を理解する
+ */
+const val6 = 0;
+if (val6) {
+  console.log("valはtruthyです");
+} else {
+  console.log("valはfalsyです");
+}
+
+const flag1 = true;
+const flag2 = true;
+
+if (flag1 || flag2) {
+  console.log("1か2はtrueになります");
+}
+
+if (flag1 && flag2) {
+  console.log("1も2もtrueになります");
+}
+
+// || はtruthyの時点で返却する
+const num = 1;
+const fee = num || "金額未設定です";
+console.log(fee);
+
+// && はfalsyの時点で返却する
+const num3 = null;
+const fee3 = num3 && "何か設定されました";
+console.log(fee3);
